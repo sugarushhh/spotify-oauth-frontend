@@ -1,0 +1,72 @@
+/* 页面背景 */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6fa3ef, #3d83d1); /* 渐变蓝色背景 */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 主容器 */
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  /* 标题样式 */
+  h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* 输入框样式 */
+  input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #3d83d1;
+  }
+  
+  /* 按钮样式 */
+  button {
+    background-color: #3d83d1;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* 曲线型边框 */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #6fa3ef;
+    transform: scale(1.05);
+  }
+  
+  /* 结果文本 */
+  .result {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
