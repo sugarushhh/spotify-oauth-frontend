@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎵 音乐识别系统</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1db954;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    form {
+      background: white;
+      color: black;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #1db954;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎧 音乐识别系统</h1>
+  <form method="POST" action="/train">
+    <label for="songs">请输入不同用户的歌曲（每组用 / 分隔，每首歌用 , 分隔）：</label>
+    <textarea id="songs" name="songs" placeholder="如：\nshape of you,perfect,shivers\n/\nspace oddity,starman,under pressure" required></textarea>
+    <button type="submit">识别用户</button>
+  </form>
+  {% if prediction %}
+    <div class="result">
+      🚀 模型预测该歌曲组属于：<strong>{{ prediction }}</strong>
+    </div>
+  {% endif %}
+</body>
+</html>
